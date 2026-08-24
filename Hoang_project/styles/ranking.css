@@ -1,0 +1,59 @@
+/* Mobile Screen */
+
+h2{
+    text-align: center;
+    margin: 40px 0;
+    background-color: #D20A0A;
+    padding: 10px;
+}
+
+.ranking-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: auto;
+    margin: 0 20px;
+}
+
+.ranking-box .weight-class2{
+    width: auto;
+}
+
+.ranking-box{
+    margin-bottom: 20px;
+}
+.ranking-box p{
+    background-color: rgb(40, 40, 40);
+    margin: 10px 5px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.weight-class2{
+    color: #D20A0A;
+    margin-left: 10px;
+}
+
+span{
+    font-weight: bolder;
+    font-size: larger;
+    color: #D20A0A;
+    margin-right: 10px;
+}
+
+/* Tablet Screen */
+
+@media(min-width: 768px){
+    .ranking-container{
+        gap: 20px;
+    }
+}
+
+/* Desktop Screen */
+
+@media(min-width: 1024px){
+    .ranking-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

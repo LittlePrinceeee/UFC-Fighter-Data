@@ -1,0 +1,47 @@
+h2{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+.athletes-box{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+}
+
+.athletes-box > img{
+    width: 250px;
+}
+
+.athletes-info{
+    flex: 1;
+}
+.athletes-info h3{
+    color: red;
+    margin: 20px 0;
+}
+
+.weight-class3{
+    color: #D20A0A;
+    align-self: center;
+    margin-left: 20px;
+    font-weight: bold;
+    width: 125px;
+    flex-shrink: 0;
+}
+
+/* Tablet Screen */
+@media(min-width:768px){
+    .athletes-box img{
+        margin: 0 auto;
+    }
+}
+
+/* Destop Screen */
+@media(min-width:1024px) {
+    
+}

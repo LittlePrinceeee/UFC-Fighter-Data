@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-96x96.png" sizes="96x96" >
+    <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg" >
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico" >
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" >
+    <meta name="apple-mobile-web-app-title" content="UFC Data" >
+    <link rel="manifest" href="../images/favicon/site.webmanifest" >
+    <title>Contact</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="../images/favicon/favicon-96x96.png" alt="UFC Logo">
+        <h1>UFC Fighter Data</h1>
+
+    </header>
+    <button id="menu-button" class="menu-button">
+        ☰
+    </button>
+        <nav id="menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="athletes.html">Athletes</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    <main>
+        <h2>Contact Us </h2>
+        <div class="wrapper">
+            <section>
+                <h3>WHAT CAN WE HELP WITH ?</h3>
+                <ul>
+                    <li><span>01</span> Report incorrect fight records, stats, or bio details</li>
+                    <li><span>02</span> The ranking we haven't update</li>
+                    <li><span>03</span> General feedbacks on the site</li>
+                </ul>
+            </section>
+
+
+            <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+                <label for="fname">Full Name</label>
+                <input type="text" id="fname" name="Full Name" placeholder="Enter your full name " required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" placeholder="example@gmail.com" required>
+                <label for="texta">Message</label>
+                <textarea id="texta" name="Message" cols="41" rows="10" placeholder="Type your message here" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 UFC Fighter Data. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const button = document.getElementById("menu-button");
+      const menu = document.getElementById("menu");
+
+      button.addEventListener("click", function () {
+        menu.classList.toggle("show");
+      });
+
+      const submitButton = document.querySelector('input[type="submit"]');
+      submitButton.addEventListener("click", function () {
+        alert("Send Successfully");
+      });
+    </script>
+</body>
+</html>
