@@ -5,8 +5,11 @@ b.	Purpose: Help UFC fans and beginners learn more about UFC fighters and unders
 
 c.	Main sections:
 Home
+
 Athletes
+
 Ranking
+
 Contact
 
 d.	The website will use text, images, lists, links, and a contact form. The Athletes page will contain fighter profiles and statistics Rankings page will display UFC rankings.
