@@ -4,6 +4,7 @@ a.	Topic: A website about information, statistics of UFC fighters
 b.	Purpose: Help UFC fans and beginners learn more about UFC fighters and understand their backgrounds, statistics, and accomplishments.
 
 c.	Main sections:
+
 Home
 
 Athletes
