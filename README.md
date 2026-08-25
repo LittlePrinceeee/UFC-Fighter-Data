@@ -17,4 +17,4 @@ d.	The website will use text, images, lists, links, and a contact form. The Athl
 
 # Site Map
 
-<img width="872" height="392" alt="image" src="https://github.com/user-attachments/assets/9ea21745-b8d0-4e38-909c-2deb674b22b3" />
+<img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/9ea21745-b8d0-4e38-909c-2deb674b22b3" />
