@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" >
+    <meta name="apple-mobile-web-app-title" content="UFC Data" >
+    <link rel="manifest" href="images/favicon/site.webmanifest" >
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/favicon/favicon-96x96.png" alt="UFC Logo">
+        <h1>UFC Fighter Data</h1>
+        
+    </header>
+        <button id="menu-button" class="menu-button">
+        ☰
+    </button>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/athletes.html">Athletes</a></li>
+            <li><a href="pages/ranking.html">Ranking</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="banner-container">
+            <img src="images/ufcbanner3.jpg" alt="UFC Banner" class="banner">
+            <div class="banner-text">
+                <h2>Welcome to UFC Fighter Data</h2>
+                <h3>The Art of Mixed Martial Arts</h3>
+            </div>
+        </div>
+
+        <section class="featured">
+            <div class="featured-image">
+                <img src="images/JoshuaVan.jpg" alt="Joshua Van">
+            </div>
+
+            <div class="featured-content">
+                <p class="tag">FEATURED</p>
+
+                <h2>
+                    DETAILED FIGHTER
+                    <span>INFORMATION</span>
+                </h2>
+
+                <p class="description">
+                    Access comprehensive data including fight records,
+                    performance stats, bio, and more. Everything you
+                    need to know about your favorite fighters.
+                </p>
+
+                
+            </div>
+                <a href="#fighters" class="btn">View Athletes →</a>
+        </section>
+
+        <section class="latest-fighters" id="fighters">
+
+            <h2 class="section-title">
+                LASTEST FIGHTERS
+            </h2>
+
+            <div class="fighters-container">
+
+                <!-- Fighter 1 -->
+                <div class="fighter-card">
+                    <img src="images/islamprofile.png" alt="Islam Makhachev">
+
+                    <div class="fighter-info">
+                        <h3>Islam Makhachev</h3>
+                        <p class="weight-class">LIGHTWEIGHT</p>
+
+                        <p>Record: 25 - 1 </p>
+                        <p>Height: 5'10''</p>
+                    </div>
+
+                        <div class="profile-link">
+                            Follow
+                            <a href="https://www.instagram.com/islam_makhachev/" target="_blank" aria-label="Follow on Instagram">
+                                <img src="images/instagram.png" alt="Instagram">
+                            </a>
+                        </div>
+                    
+                </div>
+
+                <!-- Fighter 2 -->
+                <div class="fighter-card">
+                    <img src="images/tairaprofile.png" alt="Tatsuro Taira">
+
+                    <div class="fighter-info">
+                        <h3>Tatsuro Taira</h3>
+                        <p class="weight-class">FLYWEIGHT</p>
+
+                        <p>Record: 18 - 2</p>
+                        <p>Height: 5'7''</p>
+                    </div>
+                        
+                    <div class="profile-link">
+                        Follow
+                        <a href="https://www.instagram.com/t.tatsurooo6/" target="_blank" aria-label="Follow on Instagram">
+                            <img src="images/instagram.png" alt="Instagram">
+                        </a>
+                    </div>
+                    
+                    
+                </div>
+
+                <!-- Fighter 3 -->
+                <div class="fighter-card">
+                    <img src="images/adesrofile.png" alt="Israel Adesanya">
+
+                    <div class="fighter-info">
+                        <h3>Israel Adesanya</h3>
+                        <p class="weight-class">MIDDLEWEIGHT</p>
+
+                        <p>Record: 24 - 3</p>
+                        <p>Height: 6'4''</p>
+                    </div>
+                    <div class="profile-link">
+                        Follow
+                        <a href="https://www.instagram.com/stylebender/" target="_blank" aria-label="Follow on Instagram">
+                            <img src="images/instagram.png" alt="Instagram">
+                        </a>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 UFC Fighter Data. All rights reserved.</p>
+    </footer>
+    <script>
+      const button = document.getElementById("menu-button");
+      const menu = document.getElementById("menu");
+
+      button.addEventListener("click", function () {
+        menu.classList.toggle("show");
+      });
+    </script>
+</body>
+</html>
+
+    <!-- 
+    Image source:
+    https://www.pinterest.com/pin/95842298317913222/
+    https://www.pinterest.com/pin/918734392734530082/
+    https://www.pinterest.com/pin/100416266687120003/
+    https://www.pinterest.com/pin/39195459252347088/
+    https://www.pinterest.com/pin/654429389648830389/
+    https://static.diceplatform.com/prod/198x124/mma/fightmetric/fighter/2466/HEADSHOT.png
+    https://static.diceplatform.com/prod/198x124/mma/fightmetric/fighter/3051/HEADSHOT.png
+    https://www.ufc.com/images/styles/inline/s3/2026-05/VAN_JOSHUA_BELT_05-09.png?itok=-maYDrKh
+    https://www.ufc.com/images/styles/inline/s3/2025-12/YAN_PETR_BELT.png?itok=qZUERexh
+    https://www.ufc.com/images/styles/inline/s3/2026-01/VOLKANOVSKI_ALEXANDER_BELT_01-31.png?itok=Z6d5a_8z
+    https://www.ufc.com/images/styles/inline/s3/2026-06/GAETHJE_JUSTIN_BELT_06-14.png?itok=LalUF1r3
+    https://www.ufc.com/images/styles/inline/s3/2025-01/7/MAKHACHEV_ISLAM_BELT_01-18.png?itok=VSrbKxAH
+    https://www.ufc.com/images/styles/inline/s3/2024-01/STRICKLAND_SEAN_BELT_01-20.png?itok=PRPupd6B
+    https://www.ufc.com/images/styles/inline/s3/2026-04/ULBERG_CARLOS_BELTMOCK.png?itok=BBjmGZYG
+    https://www.ufc.com/images/styles/inline/s3/2025-10/ASPINALL_TOM_BELT_10-25.png?itok=KG8IK0Ex
+    https://www.ufc.com/images/styles/inline/s3/2025-10/DERN_MACKENZIE_BELT.png?itok=TCoN3JZ0
+    https://www.ufc.com/images/styles/inline/s3/2025-11/SHEVCHENKO_VALENTINA_BELT_11-15.png?itok=b1anDn3r
+     -->
+    
