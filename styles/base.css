@@ -7,12 +7,24 @@
 
 body{
     background-color:black;
+    background-image: url('../images/background.jpg');
     color: #fff;
-    
+    background-repeat: repeat;
+    animation: bgmove 45s linear infinite;
 }
 main{
     max-width: 1200px;
     margin: 0 auto;
+    
+}
+
+@keyframes bgmove {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 500px 0;
+    }
 }
 
 /* ===== Mobile First ===== */
@@ -41,6 +53,7 @@ h1{
 nav{
     font-size: 20px;
     display: none;
+    background: rgba(20, 24, 35, 0.9);
 }
 
 .menu-button{
@@ -77,12 +90,12 @@ nav li:last-child{
 
 nav a{
     text-decoration: none;
-    color: #D20A0A; 
+    color: #fb3636; 
     transition: 0.3s;
 }
 
 nav li:hover{
-    background-color: #1a1a1a;
+    background-color: black;
     
     
 }
