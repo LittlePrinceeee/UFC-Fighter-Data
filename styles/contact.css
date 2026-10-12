@@ -26,6 +26,7 @@ h2{
 
 .wrapper h3{
     margin-bottom: 30px;
+    color: #f5c518;
 }
 section{
    
@@ -63,7 +64,7 @@ input,textarea{
     display: block;
     background-color: rgb(40, 40, 40);
     border-radius: 5px;
-    border: 1px solid #8f7c7c;
+    border: 1px solid #9E9E9E;
     color: white;
     padding: 10px;
     width: 90%;
@@ -75,7 +76,7 @@ input{
 }
 
 input[type="submit"]{
-    background-color: red;
+    background-color: #C02B1E;
     font-weight: bold;
     width: fit-content;
     padding: 0 15px ;
@@ -88,6 +89,8 @@ textarea{
     margin-top: 5px;
     margin-bottom: 10px;
 }
+input::placeholder,
+textarea::placeholder { color: #9E9E9E; }
 
 /* Tablet Screen */
 

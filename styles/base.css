@@ -10,6 +10,7 @@ body{
     background-image: url('../images/background.jpg');
     color: #fff;
     background-repeat: repeat;
+    background-size: 100vw auto;
     animation: bgmove 45s linear infinite;
 }
 main{
@@ -23,7 +24,7 @@ main{
         background-position: 0 0;
     }
     100%{
-        background-position: 500px 0;
+        background-position: 100vw 0;
     }
 }
 
@@ -102,7 +103,18 @@ nav li:hover{
 
 .section-title{
     margin:30px;
+    color: white;
+    background: rgb(0, 0, 0);
+     padding: 6px 14px;
+     border-left: 4px solid #F5C518;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 30px;
 }
+.section-title span{
+    color: #F5C518;
+    
+} 
 .logo{
     width: 50px;
     height: 50px;
@@ -143,7 +155,7 @@ nav li:hover{
 
 
 .featured-content .tag{
-    color: #D20A0A;
+    color: #F5C518;
     font-weight: bold;
     text-align: center;
 }
@@ -204,7 +216,8 @@ nav li:hover{
 }
 
 .fighter-info h3{
-    color: #D20A0A;
+    color: white;
+    font-size: 26px;
 }
 .fighter-info p{
     color: #fff;
@@ -264,6 +277,13 @@ nav li:hover{
 .fighter-info .weight-class{
     font-weight: bold;
     margin-top: 10px;
+    color: #F5C518;
+}
+.fighter-info .record{
+    color: #B3B3B3;
+}
+.fighter-info .height{
+    color: #B3B3B3;
 }
 
 footer{
