@@ -1,59 +1,85 @@
-/* Mobile Screen */
-
-h2{
-    text-align: center;
-    margin: 40px 0;
-    background-color: #D20A0A;
-    padding: 10px;
-}
+/* =========================================================
+   Ranking page
+   ========================================================= */
 
 .ranking-container{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: auto;
-    margin: 0 20px;
-}
-
-.ranking-box .weight-class2{
-    width: auto;
+    gap: 20px;
 }
 
 .ranking-box{
-    margin-bottom: 20px;
+    background: var(--panel);
+    border-radius: var(--radius-md);
+    padding: 20px 20px 12px;
 }
-.ranking-box p{
-    background-color: rgb(40, 40, 40);
-    margin: 10px 5px;
-    padding: 15px;
-    border-radius: 10px;
-    font-weight: 700;
+.ranking-box .division-name{
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+}
+
+/* Pound-for-pound gets the red treatment so it reads as the headline list */
+.ranking-box--p4p{
+    background:
+        linear-gradient(160deg, rgba(210,10,10,.28) 0%, rgba(210,10,10,0) 55%),
+        var(--panel);
+}
+.ranking-box--p4p .division-name{ color: #fff; }
+
+.ranking-box ol{
+    list-style: none;
+}
+.ranking-box li{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--line);
+    font-weight: 500;
+    font-size: 17px;
+}
+.ranking-box li:last-child{ border-bottom: none; }
+
+.rank{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
     font-size: 20px;
+    color: var(--red-text);
+    font-variant-numeric: tabular-nums;
 }
 
-.weight-class2{
-    color: #F5C518;
-    margin-left: 10px;
+.ranking-box li.is-champ{
+    font-weight: 600;
+    color: #fff;
+}
+.is-champ .rank{
+    background: var(--gold);
+    color: #1a1400;
+    border-radius: 50%;
+    font-size: 17px;
+}
+.is-champ .belt{
+    margin-left: auto;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold);
 }
 
-span{
-    font-weight: bolder;
-    font-size: larger;
-    color: #FF4D4D;
-    margin-right: 10px;
-}
-
-/* Tablet Screen */
-
-@media(min-width: 768px){
+/* Tablet */
+@media (min-width: 640px){
     .ranking-container{
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Desktop Screen */
-
-@media(min-width: 1024px){
+/* Desktop */
+@media (min-width: 1024px){
     .ranking-container{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
 }

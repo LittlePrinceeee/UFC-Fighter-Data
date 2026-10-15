@@ -3,73 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-96x96.png" sizes="96x96" >
-    <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg" >
-    <link rel="shortcut icon" href="../images/favicon/favicon.ico" >
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" >
-    <meta name="apple-mobile-web-app-title" content="UFC Data" >
-    <link rel="manifest" href="../images/favicon/site.webmanifest" >
-    <title>Contact</title>
+    <meta name="description" content="Report incorrect fighter data or send feedback.">
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="UFC Data">
+    <link rel="manifest" href="../images/favicon/site.webmanifest">
+    <title>Contact | UFC Fighter Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/contact.css">
 </head>
 <body>
-    <header>
-        <img class="logo" src="../images/favicon/favicon-96x96.png" alt="UFC Logo">
-        <h1>UFC Fighter Data</h1>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    </header>
-    <button id="menu-button" class="menu-button">
-        ☰
-    </button>
-        <nav id="menu">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="athletes.html">Athletes</a></li>
-                <li><a href="ranking.html">Ranking</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    <main>
-        <h2>Contact Us </h2>
-        <div class="wrapper">
-            <section>
-                <h3>WHAT CAN WE HELP WITH ?</h3>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="../index.html">
+                <img src="../images/favicon/favicon-96x96.png" alt="">
+                <span>UFC <b>Fighter Data</b></span>
+            </a>
+
+            <button id="menu-button" class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav id="menu" class="site-nav" aria-label="Main">
                 <ul>
-                    <li><span>01</span> Report incorrect fight records, stats, or bio details</li>
-                    <li><span>02</span> The ranking we haven't update</li>
-                    <li><span>03</span> General feedbacks on the site</li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="athletes.html">Athletes</a></li>
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <header class="page-head">
+            <h1>Contact us</h1>
+            <p>Spotted a wrong record or an outdated ranking? Send it our way and we'll fix it.</p>
+        </header>
+
+        <div class="wrapper">
+            <section class="help">
+                <h2>What can we help with?</h2>
+                <ul>
+                    <li>Report incorrect fight records, stats, or bio details</li>
+                    <li>Rankings we haven't updated yet</li>
+                    <li>General feedback on the site</li>
                 </ul>
             </section>
 
-
-            <form action="https://webdevbasics.net/scripts/demo.php" method="post">
-                <label for="fname">Full Name</label>
-                <input type="text" id="fname" name="Full Name" placeholder="Enter your full name " required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="Email" placeholder="example@gmail.com" required>
-                <label for="texta">Message</label>
-                <textarea id="texta" name="Message" cols="41" rows="10" placeholder="Type your message here" required></textarea>
-                <input type="submit" value="Send Message">
+            <form id="contact-form" action="https://webdevbasics.net/scripts/demo.php" method="post">
+                <div class="field">
+                    <label for="fname">Full name</label>
+                    <input type="text" id="fname" name="Full Name" placeholder="Enter your full name" autocomplete="name" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="Email" placeholder="example@gmail.com" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="texta">Message</label>
+                    <textarea id="texta" name="Message" rows="7" placeholder="Type your message here" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send message</button>
             </form>
         </div>
     </main>
-    <footer>
-        <p>&copy; 2026 UFC Fighter Data. All rights reserved.</p>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; 2026 UFC Fighter Data. All rights reserved.</p>
+            <nav aria-label="Footer">
+                <ul>
+                    <li><a href="athletes.html">Athletes</a></li>
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 
-    <script>
-      const button = document.getElementById("menu-button");
-      const menu = document.getElementById("menu");
-
-      button.addEventListener("click", function () {
-        menu.classList.toggle("show");
-      });
-
-      const submitButton = document.querySelector('input[type="submit"]');
-      submitButton.addEventListener("click", function () {
-        alert("Send Successfully");
-      });
-    </script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>

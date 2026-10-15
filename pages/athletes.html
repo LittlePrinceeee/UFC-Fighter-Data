@@ -3,285 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-96x96.png" sizes="96x96" >
-    <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg" >
-    <link rel="shortcut icon" href="../images/favicon/favicon.ico" >
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" >
-    <meta name="apple-mobile-web-app-title" content="UFC Data" >
-    <link rel="manifest" href="../images/favicon/site.webmanifest" >
-    <title>Athletes</title>
+    <meta name="description" content="The current champion of every UFC division.">
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="UFC Data">
+    <link rel="manifest" href="../images/favicon/site.webmanifest">
+    <title>Athletes | UFC Fighter Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/athletes.css">
 </head>
 <body>
-    <header>
-        <img class="logo" src="../images/favicon/favicon-96x96.png" alt="UFC Logo">
-        <h1>UFC Fighter Data</h1>
+    <a class="skip-link" href="#main">Skip to content</a>
 
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="../index.html">
+                <img src="../images/favicon/favicon-96x96.png" alt="">
+                <span>UFC <b>Fighter Data</b></span>
+            </a>
+
+            <button id="menu-button" class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav id="menu" class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="athletes.html" aria-current="page">Athletes</a></li>
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <button id="menu-button" class="menu-button">
-        ☰
-    </button>
-        <nav id="menu">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="athletes.html">Athletes</a></li>
-                <li><a href="ranking.html">Ranking</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    
-    <main>
-        
-            <h2>TITLE HOLDER</h2>
 
-            <div class="athletes-container">
+    <main id="main">
+        <header class="page-head">
+            <h1>Title holders</h1>
+            <p>The current champion of every UFC division, with their record and height.</p>
+        </header>
+
+        <div class="filter-bar">
+            <div class="filters" role="group" aria-label="Show divisions">
+                <button type="button" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" data-filter="men" aria-pressed="false">Men's</button>
+                <button type="button" data-filter="women" aria-pressed="false">Women's</button>
+            </div>
+            <p id="champ-count" class="count" aria-live="polite">11 champions</p>
+        </div>
+
+        <div class="athletes-container">
 
                 <!-- Fighter 1 -->
-                <div class="athletes-box">
-                    <p class="weight-class3">FLYWEIGHT</p>
-                    <img src="../images/VAN_JOSHUA_BELT.avif" alt="Joshua Van">
-
-                    <div class="athletes-info">
-                        <h3>Joshua Van</h3>
-
-                        <p>Record: 17 - 2 </p>
-                        <p>Height: 5'5''</p>
+                <article class="champ" data-division="men">
+                    <div class="champ-photo">
+                        <img src="../images/VAN_JOSHUA_BELT.avif" alt="Joshua Van with the UFC title belt" loading="lazy">
                     </div>
-                        <div class="profile-link">
-                        Follow
-                        <a href="https://www.instagram.com/thefearlessmma1/" target="_blank" aria-label="Follow on Instagram">
-                            <img src="../images/instagram.png" alt="Instagram">
+                    <div class="champ-body">
+                        <div class="champ-meta">
+                            <p class="division-name">Flyweight</p>
+                            <span class="belt">Champion</span>
+                        </div>
+                        <h2>Joshua Van</h2>
+                        <dl class="stats">
+                            <div><dt>Record</dt><dd>17–2</dd></div>
+                            <div><dt>Height</dt><dd>5'5"</dd></div>
+                        </dl>
+                        <a class="follow" href="https://www.instagram.com/thefearlessmma1/" target="_blank" rel="noopener">
+                            <img src="../images/instagram-white.png" alt="" width="18" height="18">
+                            Follow on Instagram
                         </a>
                     </div>
-                    
-                </div>
+                </article>
 
                 <!-- Fighter 2 -->
-                <div class="athletes-box">
-                    <p class="weight-class3">BANTAMWEIGHT</p>
-                    <img src="../images/YAN_PETR_BELT.avif" alt="Petr Yan">
-
-                    <div class="athletes-info">
-                        <h3>Petr Yan</h3>
-
-                        <p>Record: 20 - 0</p>
-                        <p>Height: 5'7''</p>
+                <article class="champ" data-division="men">
+                    <div class="champ-photo">
+                        <img src="../images/YAN_PETR_BELT.avif" alt="Petr Yan with the UFC title belt" loading="lazy">
                     </div>
-                        
-                    <div class="profile-link">
-                        Follow
-                        <a href="https://www.instagram.com/petr_yan/" target="_blank" aria-label="Follow on Instagram">
-                            <img src="../images/instagram.png" alt="Instagram">
+                    <div class="champ-body">
+                        <div class="champ-meta">
+                            <p class="division-name">Bantamweight</p>
+                            <span class="belt">Champion</span>
+                        </div>
+                        <h2>Petr Yan</h2>
+                        <dl class="stats">
+                            <div><dt>Record</dt><dd>20–0</dd></div>
+                            <div><dt>Height</dt><dd>5'7"</dd></div>
+                        </dl>
+                        <a class="follow" href="https://www.instagram.com/petr_yan/" target="_blank" rel="noopener">
+                            <img src="../images/instagram-white.png" alt="" width="18" height="18">
+                            Follow on Instagram
                         </a>
                     </div>
-                    
-                    
-                </div>
+                </article>
 
                 <!-- Fighter 3 -->
-                <div class="athletes-box">
-                    <p class="weight-class3">FEATHERWEIGHT</p>
-                    <img src="../images/VOLKANOVSKI_ALEXANDER_BELT.avif" alt="Alexander Volkanovski">
-
-                    <div class="athletes-info">
-                        <h3>Alexander Volkanovski</h3>
-
-                        
-
-                        <p>Record: 28 - 4</p>
-                        <p>Height: 5'6''</p>
+                <article class="champ" data-division="men">
+                    <div class="champ-photo">
+                        <img src="../images/VOLKANOVSKI_ALEXANDER_BELT.avif" alt="Alexander Volkanovski with the UFC title belt" loading="lazy">
                     </div>
-                    <div class="profile-link">
-                        Follow
-                        <a href="https://www.instagram.com/alexvolkanovski/" target="_blank" aria-label="Follow on Instagram">
-                            <img src="../images/instagram.png" alt="Instagram">
+                    <div class="champ-body">
+                        <div class="champ-meta">
+                            <p class="division-name">Featherweight</p>
+                            <span class="belt">Champion</span>
+                        </div>
+                        <h2>Alexander Volkanovski</h2>
+                        <dl class="stats">
+                            <div><dt>Record</dt><dd>28–4</dd></div>
+                            <div><dt>Height</dt><dd>5'6"</dd></div>
+                        </dl>
+                        <a class="follow" href="https://www.instagram.com/alexvolkanovski/" target="_blank" rel="noopener">
+                            <img src="../images/instagram-white.png" alt="" width="18" height="18">
+                            Follow on Instagram
                         </a>
                     </div>
-                    
-                </div>
-
+                </article>
 
                 <!-- Fighter 4 -->
-                <div class="athletes-box">
-                    <p class="weight-class3">LIGHTWEIGHT</p>
-                    <img src="../images/GAETHJE_JUSTIN_BELT.avif" alt="Justin Gaethje">
-
-                    <div class="athletes-info">
-                        <h3>Justin Gaethje</h3>
-
-                        <p>Record: 28 - 5</p>
-                        <p>Height: 5'11''</p>
+                <article class="champ" data-division="men">
+                    <div class="champ-photo">
+                        <img src="../images/GAETHJE_JUSTIN_BELT.avif" alt="Justin Gaethje with the UFC title belt" loading="lazy">
                     </div>
-                    <div class="profile-link">
-                        Follow
-                        <a href="https://www.instagram.com/justin_gaethje/" target="_blank" aria-label="Follow on Instagram">
-                            <img src="../images/instagram.png" alt="Instagram">
+                    <div class="champ-body">
+                        <div class="champ-meta">
+                            <p class="division-name">Lightweight</p>
+                            <span class="belt">Champion</span>
+                        </div>
+                        <h2>Justin Gaethje</h2>
+                        <dl class="stats">
+                            <div><dt>Record</dt><dd>28–5</dd></div>
+                            <div><dt>Height</dt><dd>5'11"</dd></div>
+                        </dl>
+                        <a class="follow" href="https://www.instagram.com/justin_gaethje/" target="_blank" rel="noopener">
+                            <img src="../images/instagram-white.png" alt="" width="18" height="18">
+                            Follow on Instagram
                         </a>
                     </div>
-                    
-                </div>
+                </article>
 
                 <!-- Fighter 5 -->
-                <div class="athletes-box">
-                    <p class="weight-class3">WELTERWEIGHT</p>
-                    <img src="../images/MAKHACHEV_ISLAM_BELT.avif" alt="Islam Makachev">
-
-                    <div class="athletes-info">
-                        <h3>Islam Makhachev</h3>
-
-                        <p>Record: 28 - 1</p>
-                        <p>Height: 5'10''</p>
+                <article class="champ" data-division="men">
+                    <div class="champ-photo">
+                        <img src="../images/MAKHACHEV_ISLAM_BELT.avif" alt="Islam Makhachev with the UFC title belt" loading="lazy">
                     </div>
-                    <div class="profile-link">
-                        Follow
-                        <a href="https://www.instagram.com/islam_makhachev/" target="_blank" aria-label="Follow on Instagram">
-                            <img src="../images/instagram.png" alt="Instagram">
+                    <div class="champ-body">
+                        <div class="champ-meta">
+                            <p class="division-name">Welterweight</p>
+                            <span class="belt">Champion</span>
+                        </div>
+                        <h2>Islam Makhachev</h2>
+                        <dl class="stats">
+                            <div><dt>Record</dt><dd>28–1</dd></div>
+                            <div><dt>Height</dt><dd>5'10"</dd></div>
+                        </dl>
+                        <a class="follow" href="https://www.instagram.com/islam_makhachev/" target="_blank" rel="noopener">
+                            <img src="../images/instagram-white.png" alt="" width="18" height="18">
+                            Follow on Instagram
                         </a>
                     </div>
-                    
-                </div>
-
-            
+                </article>
 
                 <!-- Fighter 6 -->
-                <div class="athletes-box">
-                    <p class="weight-class3">MIDDLEWEIGHT</p>
-                    <img src="../images/STRICKLAND_SEAN_BELT.avif" alt="Sean Strickland">
-
-                    <div class="athletes-info">
-                        <h3>Sean Strickland</h3>
-
-                        <p>Record: 31 - 7</p>
-                        <p>Height: 6'1''</p>
+                <article class="champ" data-division="men">
+                    <div class="champ-photo">
+                        <img src="../images/STRICKLAND_SEAN_BELT.avif" alt="Sean Strickland with the UFC title belt" loading="lazy">
                     </div>
-                    <div class="profile-link">
-                        Follow
-                        <a href="https://www.instagram.com/stricklandmma/" target="_blank" aria-label="Follow on Instagram">
-                            <img src="../images/instagram.png" alt="Instagram">
+                    <div class="champ-body">
+                        <div class="champ-meta">
+                            <p class="division-name">Middleweight</p>
+                            <span class="belt">Champion</span>
+                        </div>
+                        <h2>Sean Strickland</h2>
+                        <dl class="stats">
+                            <div><dt>Record</dt><dd>31–7</dd></div>
+                            <div><dt>Height</dt><dd>6'1"</dd></div>
+                        </dl>
+                        <a class="follow" href="https://www.instagram.com/stricklandmma/" target="_blank" rel="noopener">
+                            <img src="../images/instagram-white.png" alt="" width="18" height="18">
+                            Follow on Instagram
                         </a>
                     </div>
-                    
-                </div>
-
+                </article>
 
                 <!-- Fighter 7 -->
-                <div class="athletes-box">
-                    <p class="weight-class3">LIGHTHEAVYWEIGHT</p>
-                    <img src="../images/ULBERG_CARLOS_BELTMOCK.png" alt="Carlos Ulberg">
-
-                    <div class="athletes-info">
-                        <h3>Carlos Ulberg</h3>
-
-                        <p>Record: 15 - 1</p>
-                        <p>Height: 6'4''</p>
+                <article class="champ" data-division="men">
+                    <div class="champ-photo">
+                        <img src="../images/ULBERG_CARLOS_BELTMOCK.png" alt="Carlos Ulberg with the UFC title belt" loading="lazy">
                     </div>
-                    <div class="profile-link">
-                        Follow
-                        <a href="https://www.instagram.com/carlosulberg" target="_blank" aria-label="Follow on Instagram">
-                            <img src="../images/instagram.png" alt="Instagram">
+                    <div class="champ-body">
+                        <div class="champ-meta">
+                            <p class="division-name">Light Heavyweight</p>
+                            <span class="belt">Champion</span>
+                        </div>
+                        <h2>Carlos Ulberg</h2>
+                        <dl class="stats">
+                            <div><dt>Record</dt><dd>15–1</dd></div>
+                            <div><dt>Height</dt><dd>6'4"</dd></div>
+                        </dl>
+                        <a class="follow" href="https://www.instagram.com/carlosulberg" target="_blank" rel="noopener">
+                            <img src="../images/instagram-white.png" alt="" width="18" height="18">
+                            Follow on Instagram
                         </a>
                     </div>
-                    
-                </div>
+                </article>
 
                 <!-- Fighter 8 -->
-                <div class="athletes-box">
-                    <p class="weight-class3">HEAVYWEIGHT</p>
-                    <img src="../images/ASPINALL_TOM_BELT.png" alt="Tom Aspinall">
-
-                    <div class="athletes-info">
-                        <h3>Tom Aspinall</h3>
-
-                        <p>Record: 15 - 3</p>
-                        <p>Height: 6'5''</p>
+                <article class="champ" data-division="men">
+                    <div class="champ-photo">
+                        <img src="../images/ASPINALL_TOM_BELT.png" alt="Tom Aspinall with the UFC title belt" loading="lazy">
                     </div>
-                    <div class="profile-link">
-                        Follow
-                        <a href="https://www.instagram.com/tomaspinallofficial" target="_blank" aria-label="Follow on Instagram">
-                            <img src="../images/instagram.png" alt="Instagram">
+                    <div class="champ-body">
+                        <div class="champ-meta">
+                            <p class="division-name">Heavyweight</p>
+                            <span class="belt">Champion</span>
+                        </div>
+                        <h2>Tom Aspinall</h2>
+                        <dl class="stats">
+                            <div><dt>Record</dt><dd>15–3</dd></div>
+                            <div><dt>Height</dt><dd>6'5"</dd></div>
+                        </dl>
+                        <a class="follow" href="https://www.instagram.com/tomaspinallofficial" target="_blank" rel="noopener">
+                            <img src="../images/instagram-white.png" alt="" width="18" height="18">
+                            Follow on Instagram
                         </a>
                     </div>
-                    
-                </div>
+                </article>
 
                 <!-- Fighter 9 -->
-                <div class="athletes-box">
-                    <p class="weight-class3">WOMAN'S STRAWWEIGHT</p>
-                    <img src="../images/DERN_MACKENZIE_BELT.avif" alt="Mackenzie Dern">
-
-                    <div class="athletes-info">
-                        <h3>Mackenzie Dern</h3>
-
-                        <p>Record: 16 - 5</p>
-                        <p>Height: 5'4''</p>
+                <article class="champ" data-division="women">
+                    <div class="champ-photo">
+                        <img src="../images/DERN_MACKENZIE_BELT.avif" alt="Mackenzie Dern with the UFC title belt" loading="lazy">
                     </div>
-                    <div class="profile-link">
-                        Follow
-                        <a href="https://www.instagram.com/mackenziedern" target="_blank" aria-label="Follow on Instagram">
-                            <img src="../images/instagram.png" alt="Instagram">
+                    <div class="champ-body">
+                        <div class="champ-meta">
+                            <p class="division-name">Women's Strawweight</p>
+                            <span class="belt">Champion</span>
+                        </div>
+                        <h2>Mackenzie Dern</h2>
+                        <dl class="stats">
+                            <div><dt>Record</dt><dd>16–5</dd></div>
+                            <div><dt>Height</dt><dd>5'4"</dd></div>
+                        </dl>
+                        <a class="follow" href="https://www.instagram.com/mackenziedern" target="_blank" rel="noopener">
+                            <img src="../images/instagram-white.png" alt="" width="18" height="18">
+                            Follow on Instagram
                         </a>
                     </div>
-                    
-                </div>
-
+                </article>
 
                 <!-- Fighter 10 -->
-                <div class="athletes-box">
-                    <p class="weight-class3">WOMAN'S FLYWEIGHT</p>
-                    <img src="../images/SHEVCHENKO_VALENTINA_BELT.avif" alt="Valentina Shevchenko">
-
-                    <div class="athletes-info">
-                        <h3>Valentina Shevchenko</h3>
-
-                        <p>Record: 26 - 4 - 1</p>
-                        <p>Height: 5'5''</p>
+                <article class="champ" data-division="women">
+                    <div class="champ-photo">
+                        <img src="../images/SHEVCHENKO_VALENTINA_BELT.avif" alt="Valentina Shevchenko with the UFC title belt" loading="lazy">
                     </div>
-                    <div class="profile-link">
-                        Follow
-                        <a href="https://www.instagram.com/bulletvalentina" target="_blank" aria-label="Follow on Instagram">
-                            <img src="../images/instagram.png" alt="Instagram">
+                    <div class="champ-body">
+                        <div class="champ-meta">
+                            <p class="division-name">Women's Flyweight</p>
+                            <span class="belt">Champion</span>
+                        </div>
+                        <h2>Valentina Shevchenko</h2>
+                        <dl class="stats">
+                            <div><dt>Record</dt><dd>26–4–1</dd></div>
+                            <div><dt>Height</dt><dd>5'5"</dd></div>
+                        </dl>
+                        <a class="follow" href="https://www.instagram.com/bulletvalentina" target="_blank" rel="noopener">
+                            <img src="../images/instagram-white.png" alt="" width="18" height="18">
+                            Follow on Instagram
                         </a>
                     </div>
-                    
-                </div>
+                </article>
 
                 <!-- Fighter 11 -->
-                <div class="athletes-box">
-                    <p class="weight-class3">WOMAN'S BANTAMWEIGHT</p>
-                    <img src="../images/HARRISON_KAYLA_BELTMOCK.avif" alt="Kayla Harrison">
-
-                    <div class="athletes-info">
-                        <h3>Kayla Harrison</h3>
-
-                        <p>Record: 19 - 1</p>
-                        <p>Height: 5'8''</p>
+                <article class="champ" data-division="women">
+                    <div class="champ-photo">
+                        <img src="../images/HARRISON_KAYLA_BELTMOCK.avif" alt="Kayla Harrison with the UFC title belt" loading="lazy">
                     </div>
-                    <div class="profile-link">
-                        Follow
-                        <a href="https://www.instagram.com/kaylaharrisonofficial" target="_blank" aria-label="Follow on Instagram">
-                            <img src="../images/instagram.png" alt="Instagram">
+                    <div class="champ-body">
+                        <div class="champ-meta">
+                            <p class="division-name">Women's Bantamweight</p>
+                            <span class="belt">Champion</span>
+                        </div>
+                        <h2>Kayla Harrison</h2>
+                        <dl class="stats">
+                            <div><dt>Record</dt><dd>19–1</dd></div>
+                            <div><dt>Height</dt><dd>5'8"</dd></div>
+                        </dl>
+                        <a class="follow" href="https://www.instagram.com/kaylaharrisonofficial" target="_blank" rel="noopener">
+                            <img src="../images/instagram-white.png" alt="" width="18" height="18">
+                            Follow on Instagram
                         </a>
                     </div>
-                    
-                </div>
+                </article>
 
-            </div>
-        
-        
-        
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2026 UFC Fighter Data. All rights reserved.</p>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; 2026 UFC Fighter Data. All rights reserved.</p>
+            <nav aria-label="Footer">
+                <ul>
+                    <li><a href="athletes.html">Athletes</a></li>
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 
-    <script>
-      const button = document.getElementById("menu-button");
-      const menu = document.getElementById("menu");
-
-      button.addEventListener("click", function () {
-        menu.classList.toggle("show");
-      });
-    </script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
